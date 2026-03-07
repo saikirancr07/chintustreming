@@ -1,0 +1,20 @@
+.saved-list-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.no-saved-image {
+  width: 60%;
+}
+.saved-videos-list-item{
+ 
+  width: 300px;
+}
+@media screen and (max-width : 768px){
+  .saved-list-container{
+    flex-direction: column;
+  }
+}

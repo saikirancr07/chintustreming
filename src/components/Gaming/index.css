@@ -1,0 +1,32 @@
+.gaming-list-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0px;
+  justify-content: space-between;
+}
+.gaming-list-item {
+  width: 250px;
+  margin: 5px;
+  list-style-type: none;
+}
+.gaming-thumbnail-url {
+  width: 100%;
+  height: 300px;
+}
+.light-gaming-link-item {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  color: #000000;
+}
+.light-game-link-item {
+  text-decoration: none;
+  width: 100%;
+  color: #000000;
+}
+.dark-game-link-item {
+  text-decoration: none;
+  width: 100%;
+  color: #ffffff;
+}

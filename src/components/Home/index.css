@@ -1,0 +1,146 @@
+
+.light-home-bg-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: aliceblue;
+  color: #000000;
+}
+.dark-home-bg-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #181818;
+  color: #ffffff;
+}
+.home-bottom-container {
+  width: 95%;
+  display: flex;
+}
+.home-right-container {
+  width: 100%;
+
+}
+.top-section {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png');
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+.website-logo-home {
+  width: 200px;
+}
+.top-section-para {
+  font-size: 20px;
+}
+.get-it-now {
+  background-color: transparent;
+  padding: 5px 10px 5px 10px;
+}
+.close-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.search {
+  font-size: 22px;
+}
+.bottom-section {
+  min-height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-list-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0px;
+  list-style-type: none;
+  padding: 20px;
+}
+.light-home-list-item {
+  width: 30%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  /* color: #000000; */
+}
+.home-list-item {
+  width: 30%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .home-list-item {
+    width: 45%;
+  }
+  .home-list-item {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 756px) {
+  .home-list-item {
+    width: 90%;
+  }
+  .home-list-item {
+    width: 90%;
+  }
+}
+.light-home-link-item {
+  color: #000000;
+  text-decoration: none;
+}
+.dark-home-link-item {
+  color: #f9f9f9;
+  text-decoration: none;
+}
+.home-image {
+  width: 100%;
+}
+.item-container {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-image {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.home-content {
+  align-self: flex-start;
+  margin-top: 0px;
+  /* color: #181818; */
+}
+.count-year {
+  display: flex;
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar {
+    display: none;
+  }
+}
+.failure-content {
+  text-align: center;
+}
+.failure-image {
+  width: 200px;
+}
+.retry-button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: none;
+  padding: 5px 10px 5px 10px;
+  font-size: 18px;
+}
