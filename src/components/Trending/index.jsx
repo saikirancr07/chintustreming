@@ -67,15 +67,15 @@ class Trending extends Component {
     <SavedContext.Consumer>
       {value => {
         const {theme} = value
-        const homeBgContainer = theme
-          ? 'light-home-bg-container'
-          : 'dark-home-bg-container'
+        const trendingBgContainer = theme
+          ? 'light-trending-bg-container'
+          : 'dark-trending-bg-container'
         const themeColor = theme ? 'white-theme' : 'black-theme'
         const linkTextColor = theme ? "white-link" : "black-link"
 
         const {videosList} = this.state
         return (
-          <div className={homeBgContainer}>
+          <div className={trendingBgContainer}>
             <div className={`trending-icon-container ${themeColor}`}>
               <button type="button" className="trending-icon-button">
                 <FaHotjar size="30" className="trending-icon" />
@@ -96,9 +96,9 @@ class Trending extends Component {
                     />
                     <div className="trending-content">
                       <p className="trending-title">{eachItem.title}</p>
-                      <p>{eachItem.channel.name}</p>
+                      <p className="name">{eachItem.channel.name}</p>
                       <div className="year-views">
-                        <p>{eachItem.viewCount} Views</p>
+                        <p>{eachItem.viewCount} Views . </p>
                         <p> {this.renderTheYear(eachItem.publishedAt)}</p>
                       </div>
                     </div>
@@ -166,7 +166,7 @@ class Trending extends Component {
                 <div className="trending-sidebar-container">
                   <Sidebar theme={theme} />
                 </div>
-                {this.renderTheStatus()}
+                <div className='trending-right-container'>{this.renderTheStatus()}</div>
               </div>
             </div>
           )

@@ -32,8 +32,10 @@ class SavedVideos extends Component {
           const {savedVideosList, theme} = value
           const isShow = savedVideosList.length > 0
           const homeBgContainer = theme
-            ? 'light-home-bg-container'
-            : 'dark-home-bg-container'
+            ? 'light-saved-videos-bg-container'
+            : 'dark-saved-videos-bg-container'
+          const savedVideosLinkItem = theme ? 'light-saved-videos-link-item' : 'dark-saved-videos-link-item'
+          const savedVideosSuccessContainer = theme ? 'light-saved-videos-success-container' : 'dark-saved-videos-success-container'
           return (
             <div className={homeBgContainer} data-testid="savedVideos">
               <Header />
@@ -42,7 +44,7 @@ class SavedVideos extends Component {
                   <Sidebar theme={theme} />
                 </div>
                 {isShow ? (
-                  <div className="trending-success-container">
+                  <div className={savedVideosSuccessContainer}>
                     <div className="trending-icon-container">
                       <button type="button" className="trending-icon-button">
                         <MdPlaylistAdd size="30" className="trending-icon" />
@@ -53,17 +55,17 @@ class SavedVideos extends Component {
                       {savedVideosList.map(eachItem => (
                         <Link
                             to={`/videos/${eachItem.id}`}
-                            className="light-gaming-link-item"
+                            className={savedVideosLinkItem}
                           >
                           <li key={eachItem.id} className="saved-videos-list-item">
                               <img
                                 src={eachItem.thumbnailUrl}
                                 alt="video thumbnail"
-                                className="trending-thumbnail-url"
+                                className="saved-videos-image-url"
                               />
-                              <div className="trending-content">
+                              <div className="saved-videos-content">
                                 <p className="trending-title">{eachItem.title}</p>
-                                <p>{eachItem.channel.name}</p>
+                                <p className="name">{eachItem.channel.name}</p>
                                 <div className="count-year">
                                   <p>{eachItem.viewCount} . </p>
                                   <p>

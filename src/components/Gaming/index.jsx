@@ -60,16 +60,16 @@ class Gaming extends Component {
     <SavedContext.Consumer>
       {value => {
         const {theme} = value
-        const homeBgContainer = theme
-          ? 'light-home-bg-container'
-          : 'dark-home-bg-container'
+        // const homeBgContainer = theme
+        //   ? 'light-home-bg-container'
+        //   : 'dark-home-bg-container'
         const lightGameLinkItem = theme
           ? 'light-game-link-item'
           : 'dark-game-link-item'
         const {videosList} = this.state
 
         return (
-          <div className={homeBgContainer} data-testid="gaming">
+          <div data-testid="gaming">
             <div className="trending-icon-container">
               <button type="button" className="trending-icon-button">
                 <IoLogoGameControllerB size="30" className="trending-icon" />
@@ -90,8 +90,8 @@ class Gaming extends Component {
                     />
                     <div className="gaming-content">
                       <p className="trending-title">{eachItem.title}</p>
-                      <p>{eachItem.viewCount}</p>
-                      <p>World wide</p>
+                      <p className="name">{eachItem.viewCount}</p>
+                      <p className='trending-title'>World wide</p>
                     </div>
                   </Link>
                 </li>
@@ -157,7 +157,7 @@ class Gaming extends Component {
                 <div className="trending-sidebar-container">
                   <Sidebar theme={theme} />
                 </div>
-                {this.renderTheStatus()}
+                <div className="trending-right-container">{this.renderTheStatus()}</div>
               </div>
             </div>
           )

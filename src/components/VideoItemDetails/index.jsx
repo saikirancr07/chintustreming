@@ -120,8 +120,8 @@ class VideoItemDetails extends Component {
     
         return (
           <div className="video-container">
-            <ReactPlayer src={videoUrl} width="100%" height="50%"/>
-            <p>{title}</p>
+            <ReactPlayer src={videoUrl} width="100%" height="300px"/>
+            <p className="trending-title">{title}</p>
             <div className="view-year-likes-container">
               <div className="views-year">
                 <p>{viewCount} . </p>
@@ -165,9 +165,9 @@ class VideoItemDetails extends Component {
                 className="profile-image"
               />
               <div className="videos-right">
-                <p>{channel.name}</p>
-                <p>{description}</p>
-                <p>{channel.subscriberCount} subscribers</p>
+                <p className="trending-title">{channel.name}</p>
+                <p className='name'>{channel.subscriberCount} subscribers</p>
+                <p className="trending-title">{description}</p>
               </div>
             </div>
           </div>
@@ -231,7 +231,7 @@ class VideoItemDetails extends Component {
                 <div className="videos-sidebar-container">
                   <Sidebar theme={theme}/>
                 </div>
-                {this.renderTheStatus()}
+                <div className="render-status">{this.renderTheStatus()}</div>
               </div>
             </div>
           )

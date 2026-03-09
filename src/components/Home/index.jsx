@@ -30,6 +30,7 @@ class Home extends Component {
 
     const {searchInput} = this.state
     const token = Cookies.get('jwt_token')
+    console.log(token)
     const options = {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -134,10 +135,10 @@ class Home extends Component {
                   className="profile-image"
                 />
                 <div className="home-content">
-                  <p>{eachItem.title}</p>
-                  <p>{eachItem.channel.name}</p>
+                  <p className="title">{eachItem.title}</p>
+                  <p className="name">{eachItem.channel.name}</p>
                   <div className="count-year">
-                    <p>{eachItem.viewCount} . </p>
+                    <p>{eachItem.viewCount} Views . </p>
                     <p> {this.renderTheYear(eachItem.publishedAt)}</p>
                   </div>
                 </div>

@@ -27,11 +27,13 @@ class Login extends Component {
 
   onSuccessSubmit = token => {
     Cookies.set('jwt_token', token, {expires: 30})
+    console.log("success")
     this.props.navigate("/")
   }
 
   submitTheForm = async event => {
     event.preventDefault()
+    console.log("submiteventtriggered")
     const {username, userPassword} = this.state
     const userDetails = {username, password: userPassword}
     const url = 'https://apis.ccbp.in/login'
@@ -42,6 +44,7 @@ class Login extends Component {
 
     const response = await fetch(url, options)
     const data = await response.json()
+    console.log("fetch success")
     if (response.ok === true) {
       this.onSuccessSubmit(data.jwt_token)
     } else {

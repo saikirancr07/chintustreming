@@ -30,3 +30,9 @@
   width: 100%;
   color: #ffffff;
 }
+.trending-right-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
