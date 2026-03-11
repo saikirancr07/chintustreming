@@ -27,8 +27,7 @@ class Login extends Component {
 
   onSuccessSubmit = token => {
     Cookies.set('jwt_token', token, {expires: 30})
-    console.log("success")
-    this.props.navigate("/")
+    this.props.navigate("/",{replace:true})
   }
 
   submitTheForm = async event => {
@@ -44,11 +43,9 @@ class Login extends Component {
 
     const response = await fetch(url, options)
     const data = await response.json()
-    console.log("fetch success")
     if (response.ok === true) {
       this.onSuccessSubmit(data.jwt_token)
     } else {
-      console.log(data)
       this.setState({isError: true, errMsg: data.error_msg})
     }
   }
@@ -120,7 +117,7 @@ class Login extends Component {
           </form>
         </div>
         <div className="user-credentials">
-          <button type="button" className="white-button">user credentials</button>
+          <button type="button" className="white-button">Demo Credentials</button>
           <p>username : rahul</p>
           <p>password : rahul@2021</p>
         </div>
